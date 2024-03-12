@@ -1,0 +1,298 @@
+/* Estilos generales */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, nav a, footer, .social-links, .social-link {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #F4F1BB;
+    text-align: center;
+    width: 100%; /* Ancho máximo para evitar que se expanda demasiado en pantallas grandes */
+}
+
+/* Encabezado */
+header {
+    background-color: #ED6A5A;
+    height: 100px;
+}
+
+/* Navegación */
+nav {
+    height: 80px;
+    background-color: #9BC1BC;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 50px; /* Abreviación de margin-left y margin-right */
+    text-align: center;
+    width: 0%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E6EBE0;
+}
+
+nav ul li a:hover {
+    color: #ED6A5A;
+}
+
+/* Sección */
+section {
+    margin: 30px auto; /* Abreviación de margin-top y margin-bottom */
+    width: 70%;
+    background-color: #F4F1BB; /* Cambiado a un color diferente */
+    color: #ED6A5A;
+    padding: 30px;
+    text-align: left;
+}
+
+section h1 {
+    margin-bottom: 20px;
+}
+
+/* Prácticas */
+section.practicas {
+    width: 20%;
+    height: 80px;
+    margin: 20px;
+    display: inline-block;
+    background-color: #F4F1BB;
+    margin-bottom: 40px; /* Adds a space of 40px below each section */
+}
+
+/* Contacto */
+#enviar {
+    width: 80%; /* Ajusta el ancho del formulario según tus preferencias */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: auto; /* Agrega un margen superior e inferior para separarlo del resto de la página */
+    padding: 20px; /* Agrega un poco de espacio interno al contenedor del formulario */
+    background-color: #35C9C2;
+    border-radius: 10px; /* Añade bordes redondeados al contenedor */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al contenedor */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #134A59; /* Cambia el color del texto de los elementos <label> a #134A59 */
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+#fname,
+#email {
+    background-color: #E6EBE0;
+    color: #ED6A5A;
+    border-radius: 10px; /* Puedes ajustar el valor de acuerdo a tus preferencias */
+}
+
+/* Galería */
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+.gallery-container section {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-auto-rows: auto; /* Ajusta automáticamente la altura según el contenido */
+    gap: 30px;
+    max-width: 90%;
+    width: 100%; /* Cambiado a 100% para que ocupe todo el ancho */
+}
+
+.gallery-container section img {
+    width: 80%; /* Cambiado a 100% para que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente manteniendo la proporción */
+    object-fit: cover; /* Ajusta la imagen manteniendo la proporción y cubriendo todo el contenedor */
+}
+
+
+
+
+/* Aplicar filtros a las imágenes */
+.gallery-container img:nth-child(1) {
+    filter: blur(5px);
+}
+.gallery-container img:nth-child(2) {
+    filter: brightness(0.4);
+}
+.gallery-container img:nth-child(3) {
+    filter: contrast(200%);
+}
+.gallery-container img:nth-child(4) {
+    filter: drop-shadow(16px 16px 20px blue);
+}
+.gallery-container img:nth-child(5) {
+    filter: grayscale(50%);
+}
+.gallery-container img:nth-child(6) {
+    filter: hue-rotate(90deg);
+}
+.gallery-container img:nth-child(7) {
+    filter: invert(75%);
+}
+
+/* Tablas */
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid #ED6A5A; /* Corregido */
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+th {
+    background-color: #9BC1BC;
+    border: 5px solid #ED6A5A; /* Corregido */
+}
+
+td {
+    background-color: #E6EBE0;
+    border: 5px solid #ED6A5A; /* Corregido */
+}
+
+#tabla_uno {
+    border-color: #36C9C6;
+    background-color: transparent;
+}
+
+#tabla_uno td,
+#tabla_uno th {
+    border: 3px solid #36C9C6;
+    color: #36C9C6;
+}
+
+#tabla_uno tbody tr td {
+    background-color: transparent;
+}
+
+#tabla_uno tbody tr:nth-child(odd) {
+    background-color: #ED6A5A;
+}
+
+#tabla_uno tbody tr:nth-child(even) td {
+    color: #ED6A5A;
+}
+
+#tabla_uno tbody tr th {
+    color: #F4F1BB;
+    width: auto;
+}
+
+/* Estilo específico para las filas */
+#tabla_uno tbody tr:nth-child(2),
+#tabla_uno tbody tr:nth-child(4),
+#tabla_uno tbody tr:nth-child(6) {
+    color: #ED6A5A;
+    background-color: #36C9C6;
+}
+
+#tabla_dos tbody tr td {
+    background-color: transparent;
+    color: #ED6A5A;
+}
+
+#tabla_dos thead tr th {
+    color: #F4F1BB;
+}
+
+#tabla_dos tbody tr:hover {
+    background-color: #ED6A5A;
+}
+
+#tabla_dos tbody tr:hover td {
+    color: #36C9C6;
+}
+
+/* Video */
+
+.video_all {
+    margin: 20px auto;
+    width: 50%;
+    display: block;
+}
+
+/* BOTON */
+
+.enviar {
+    background-color: #ED6A5A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilo para centrar el video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Youtube */
+
+.container {
+            background-color: #F4F1BB;
+            padding: 20px;
+        }
+
+        .iframe-container {
+            margin-top: 20px;
+        }
+
+.iframe-container {
+            margin: 0 auto; /* Centrar horizontalmente */
+            width: 560px; /* Ancho del video */
+        }
+.container p {
+    text-align: justify;
+}
+
+
+
+/* Pie de página */
+footer {
+    background-color: #ED6A5A;
+    height: 50px;
+    color: #F4F1BB; /* Cambiar el color del texto para que sea visible */
+}
